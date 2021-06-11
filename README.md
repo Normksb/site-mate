@@ -1,2 +1,3 @@
-# SiteMate
-SiteMate -  Construction Site Management application
+# Site-mate
+
+site mate is a construction site management app.
