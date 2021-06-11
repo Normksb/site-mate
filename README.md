@@ -1,2 +1,1 @@
-# SiteMate
-SiteMate -  Construction Site Management application
+# Site-mate
