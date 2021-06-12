@@ -1,0 +1,14 @@
+https://coolors.co/03045e-0077b6-00b4d8-90e0ef-caf0f8
+
+/* CSV */
+03045e,0077b6,00b4d8,90e0ef,caf0f8
+
+/* Array */
+["03045e","0077b6","00b4d8","90e0ef","caf0f8"]
+
+/* Object */
+{"Navy Blue":"03045e","Star Command Blue":"0077b6","Cerulean Crayola":"00b4d8","Sky Blue Crayola":"90e0ef","Powder Blue":"caf0f8"}
+
+/* Extended Array */
+[{"name":"Navy Blue","hex":"03045e","rgb":[3,4,94],"cmyk":[97,96,0,63],"hsb":[239,97,37],"hsl":[239,94,19],"lab":[8,36,-50]},{"name":"Star Command Blue","hex":"0077b6","rgb":[0,119,182],"cmyk":[100,35,0,29],"hsb":[201,100,71],"hsl":[201,100,36],"lab":[48,-4,-41]},{"name":"Cerulean Crayola","hex":"00b4d8","rgb":[0,180,216],"cmyk":[100,17,0,15],"hsb":[190,100,85],"hsl":[190,100,42],"lab":[68,-25,-29]},{"name":"Sky Blue Crayola","hex":"90e0ef","rgb":[144,224,239],"cmyk":[40,6,0,6],"hsb":[189,40,94],"hsl":[189,75,75],"lab":[85,-21,-15]},{"name":"Powder Blue","hex":"caf0f8","rgb":[202,240,248],"cmyk":[19,3,0,3],"hsb":[190,19,97],"hsl":[190,77,88],"lab":[92,-11,-8]}]
+Download
