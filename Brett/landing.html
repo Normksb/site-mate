@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>The Tech Blog</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 id="logo">Site Mate</h1><a href="#"></a>
+      <nav>
+        <ul>
+          <a id="employeesBtn" href="#">Employees</a>
+          <a id="sitesBtn" href="#">Sites</a>
+          <a id="scheduleBtn" href="#">Schedule</a>
+          <a id="signUpBtn" href="#">Sign in</a>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to Site Mate</h1>
+        <h3>The Easy Way To Manage Your Resources</h3>
+    </div>
+    <section class="signModal">
+      <div class="modalContent">
+        <h1 class="modalTitle">Sign Up</h1>
+        <button id="closeSign" class="closeBtn">&times;</button>
+      </div>
+      <form class="form" action="#">
+
+        <label for="name-signup"></label>
+        <input type="text" id="name-sign-up" autocomplete="name" placeholder="name" />
+
+        <label for="email-signup"></label>
+        <input type="email" id="email-signup" autocomplete="email" placeholder="email" />
+
+        <label for="password-signup"></label>
+        <input type="password" id="password-signup" autocomplete="new-password" placeholder="Password" />
+
+        <label for="confirm-password-signup"></label>
+        <input type="password" id="confirm-password-signup" autocomplete="new-password" placeholder="Confirm Password" />
+
+        <input class="submitBtn" type="submit" value="Submit" />
+      </form>
+    </section>
+
+    <section class="loginModal">
+      <div class="modalContent">
+        <h1 class="modalTitle">Sign In</h1>
+        <button id="closeLogin" class="closeBtn">&times;</button>
+      </div>
+
+      <form class="form" action="#">
+
+        <label for="username-login"></label>
+        <input type="text" id="email-login" autocomplete="email" placeholder="Email" />
+
+        <label for="password-login"></label>
+        <input type="password" id="password-login" autocomplete="new-password" placeholder="Password" />
+
+        <label for="confirm-password-login"></label>
+        <input type="password" id="confirm-password-login" autocomplete="new-password" placeholder="Confirm Password" />
+
+        <input class="submitBtn" type="submit" value="Submit" />
+      </form>
+
+      <div class="signUp">
+        <p>Not Registered?</p>
+        <button id="signBtn" >Sign Up</button>
+      </div>
+    </section>
+
+    <div class="bigScroll"></div>
+
+  </main>
+
+    <script src="./script.js" ></script>
+  </body>
+</html>
