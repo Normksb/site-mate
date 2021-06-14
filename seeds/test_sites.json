@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "site_name": "Mandurah Hospital",
+        "site_address": "123 Fake Street",
+        "site_notes": "awesome site notes here",
+        "contact_name": "Joseph Standford",
+        "contact_number": "0400000004"
+    },
+    {
+        "id": 2,
+        "site_name": "Northbridge Church",
+        "site_address": "223 Fake Street",
+        "site_notes": "awesome site notes here",
+        "contact_name": "Joseph Standford",
+        "contact_number": "0400000004"
+    }
+]
