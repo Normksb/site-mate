@@ -16,6 +16,10 @@ Employee.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    is_manager: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
     first_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -52,7 +56,6 @@ Employee.init(
       },
     },
     sequelize,
-    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'Employee',

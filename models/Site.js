@@ -19,9 +19,17 @@ Site.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    site_description: {
+    site_notes: {
       type: DataTypes.STRING,
       allowNull: true,
+    },
+    contact_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    contact_phone: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {
