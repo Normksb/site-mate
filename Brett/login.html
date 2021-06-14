@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>The Tech Blog</title>
+  </head>
+  <body>
+    <header class="header">
+      <a id="logo" href="./index.html">Site Mate</a>
+      <nav>
+        <ul>
+          <a id="loginBtn" href="#">Sign In</a>
+          <a id="signUpBtn" href="#">Register</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="signModal">
+      <div class="modalContent">
+        <h1 class="modalTitle">Sign Up</h1>
+        <button id="closeSign" class="closeBtn">&times;</button>
+      </div>
+      <form class="form" action="#">
+        <label for="name-signup"></label>
+        <input type="text" id="name-sign-up" placeholder="name" />
+        <label for="email-signup"></label>
+        <input type="email" id="email-signup" placeholder="email" />
+        <label for="password-signup"></label>
+        <input type="password" id="password-signup" placeholder="Password" />
+        <label for="confirm-password-signup"></label>
+        <input type="password" id="confirm-password-signup" placeholder="Confirm Password" />
+        <input id="submitBtn" type="submit" value="Submit" />
+      </form>
+    </section>
+
+    <section class="loginModal">
+      <div class="modalContent">
+        <h1 class="modalTitle">Login</h1>
+        <button id="closeLogin" class="closeBtn">&times;</button>
+      </div>
+
+      <form class="form" action="#">
+        <label for="username-login"></label>
+        <input type="text" id="username-login" placeholder="Username" />
+        <label for="password-login"></label>
+        <input type="password" id="password-login" placeholder="Password" />
+        <label for="confirm-password-login"></label>
+        <input type="password" id="confirm-password-login" placeholder="Confirm Password" />
+        <input id="submitBtn" type="submit" value="Submit" />
+      </form>
+
+      <div class="signUp">
+        <p>Not signed up?</p>
+        <button id="signBtn" >Sign Up</button>
+      </div>
+    </section>
+
+
+  </main>
+
+    <script src="./script.js" ></script>
+  </body>
+</html>
