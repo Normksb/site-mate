@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "week": 1,
+        "site": 1,
+        "Employee": 1
+    },
+    {
+        "id": 2,
+        "week": 1,
+        "site": 1,
+        "Employee": 2
+    },
+    {
+        "id": 3,
+        "week": 1,
+        "site": 2,
+        "Employee": 3
+    },
+    {
+        "id": 4,
+        "week": 2,
+        "site": 1,
+        "Employee": 1
+    }
+
+]
