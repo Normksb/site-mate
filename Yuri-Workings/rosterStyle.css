@@ -1,0 +1,48 @@
+#backgroundContainer {
+    background: url(./images/silvia-brazzoduro-YSxcf6C_SEg-unsplash.jpg);
+    z-index: -1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.4;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.slidebarWrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+.slidebar {
+    width: 200px;
+    height: 50vh;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 5vw;
+}
+
+.slide{
+    width: 200px;
+    flex-shrink: 0;
+    height: 50vh;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    border: solid 5px #00B4D8;
+    border-radius: 20px;
+    background-color: #0077b6
+}
+
+.slidebar > section {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
