@@ -16,10 +16,10 @@ Employee.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    is_manager: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true,
-    },
+    // is_manager: {
+    //   type: DataTypes.BOOLEAN,
+    //   allowNull: true,
+    // },
     first_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -28,10 +28,10 @@ Employee.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    phone_number: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
+    // phone_number: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
     email: {
       type: DataTypes.STRING,
       allowNull: false,

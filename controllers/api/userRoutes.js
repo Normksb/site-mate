@@ -48,8 +48,8 @@ router.post('/login', async (req, res) => {
   router.post('/', async (req, res) => {
     try {
       const dbEmployeeData = await Employee.create({
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
         email: req.body.email,
         password: req.body.password,
       });

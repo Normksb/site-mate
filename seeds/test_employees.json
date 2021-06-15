@@ -1,28 +1,22 @@
 [
     {
         "id": 1,
-        "is_manager": 1,
         "first_name": "Yuri",
         "last_name": "Kitchen",
-        "phone_number": "0400000001",
         "email": "yuri@site.net",
         "password": "123456"
     },
     {
         "id": 2,
-        "is_manager": 0,
         "first_name": "Brett",
         "last_name": "Treweek",
-        "phone_number": "0400000002",
         "email": "brett@site.net",
         "password": "123456"
     },
     {
         "id": 3,
-        "is_manager": 0,
         "first_name": "Norm",
         "last_name": "Bernard",
-        "phone_number": "0400000003",
         "email": "norm@site.net",
         "password": "123456"
     }
