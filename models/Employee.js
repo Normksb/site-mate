@@ -18,7 +18,7 @@ Employee.init(
     },
     is_manager: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
+      allowNull: true,
     },
     first_name: {
       type: DataTypes.STRING,
@@ -30,7 +30,7 @@ Employee.init(
     },
     phone_number: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     email: {
       type: DataTypes.STRING,
