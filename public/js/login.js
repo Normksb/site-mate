@@ -1,6 +1,9 @@
+console.log('AAAAAAAAAAAAAAAA', )
+console.log(document
+  .querySelector('#login-submit')) 
 const loginFormHandler = async (event) => {
     event.preventDefault();
-  
+    
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
   
@@ -23,4 +26,4 @@ const loginFormHandler = async (event) => {
 
   document
   .querySelector('#login-submit')
-  .addEventListener('submit', loginFormHandler);
+  .addEventListener('click', loginFormHandler);

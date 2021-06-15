@@ -25,13 +25,12 @@ router.post('/login', async (req, res) => {
         res
           .status(400)
           .json({ message: 'Incorrect email or password. Please try again!' });
-          console.log('holey crap a user logged in......................................')
         return;
       }
   
       req.session.save(() => {
         req.session.loggedIn = true;
-        console.log('holey crap a user logged in')
+        console.log('holey crap a user logged in DDDDDDDDDDDDDDDDDD', req.session.loggedIn)
   
         res
           .status(200)
