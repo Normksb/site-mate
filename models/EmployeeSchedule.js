@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Schedule extends Model {}
+class EmployeeSchedule extends Model {}
 
-Schedule.init(
+EmployeeSchedule.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,11 +11,11 @@ Schedule.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    week_date: {
-      type: DataTypes.DATE,
+    schedule_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
-    site_id: {
+    employee_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
@@ -24,8 +24,8 @@ Schedule.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Schedule',
+    modelName: 'EmployeeSchedule',
   }
 );
 
-module.exports = Schedule;
+module.exports = EmployeeSchedule;

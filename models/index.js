@@ -2,29 +2,69 @@ const Employee = require('./Employee');
 const Site = require('./Site');
 const Schedule = require('./Schedule');
 const Weeks = require('./Weeks');
+const EmployeeSchedule = require('./EmployeeSchedule');
 
-Schedule.hasOne(Employee, {
-  foreignKey: 'schedule_id',
-});
+Employee.hasMany(EmployeeSchedule, {
+     foreignkey: 'employee_id',
+     onDelete: 'CASCADE'
+})
 
-Schedule.hasOne(Site, {
-  foreignKey: 'schedule_id',
-});
+EmployeeSchedule.belongsTo(Employee, {
+    foreignkey: 'employee_id',
+    onDelete: 'CASCADE'
+})
 
-Schedule.hasOne(Weeks, {
-  foreignKey: 'schedule_id',
-});
+Schedule.hasMany(EmployeeSchedule, {
+    foreignkey: 'schedule_id',
+    onDelete: 'CASCADE'
+})
 
-Employee.belongsToMany(Schedule, {
-  foreignKey: 'schedule_id',
-});
+EmployeeSchedule.belongsTo(Schedule, {
+    foreignkey: 'schedule_id',
+    onDelete: 'CASCADE'
+})
 
-Site.belongsToMany(Schedule, {
-  foreignKey: 'schedule_id',
-});
+Site.hasMany(Schedule, {
+  foreignkey: 'site_id',
+  onDelete: 'CASCADE'
+})
 
-Weeks.belongsToMany(Schedule, {
-  foreignKey: 'schedule_id',
-});
+Schedule.belongsTo(Site, {
+  foreignKey: 'site_id',
+  onDelete: 'CASCADE'
+})
 
-module.exports = { Employee, Site, Weeks, Schedule };
+// Schedule.hasOne(Employee, {
+//   foreignKey: 'schedule_id',
+// });
+
+// Schedule.hasOne(Site, {
+//   foreignKey: 'schedule_id',
+// });
+
+// Schedule.hasOne(Weeks, {
+//   foreignKey: 'schedule_id',
+// });
+
+// EmployeeSchedule.hasOne(Schedule, {
+//   foreignKey: 'schedule_id'
+// });
+
+// Employee.belongsToMany(Schedule, {
+//   foreignKey: 'schedule_id',
+//   through: 'EmployeeSchedule'
+// });
+
+// Site.belongsToMany(Schedule, {
+//   foreignKey: 'schedule_id',
+// });
+
+// Weeks.belongsToMany(Schedule, {
+//   foreignKey: 'schedule_id',
+// });
+
+// Schedule.belongsToMany(EmployeeSchedule, {
+//   foreignKey: 'schedule_id',
+// });
+
+module.exports = { Employee, Site, Weeks, Schedule, EmployeeSchedule };
