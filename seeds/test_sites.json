@@ -5,7 +5,7 @@
         "site_address": "123 Fake Street",
         "site_notes": "awesome site notes here",
         "contact_name": "Joseph Standford",
-        "contact_number": "0400000004"
+        "contact_phone": "0400000004"
     },
     {
         "id": 2,
@@ -13,6 +13,6 @@
         "site_address": "223 Fake Street",
         "site_notes": "awesome site notes here",
         "contact_name": "Joseph Standford",
-        "contact_number": "0400000004"
+        "contact_phone": "0400000004"
     }
 ]

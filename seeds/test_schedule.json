@@ -1,18 +1,18 @@
 [
     {
         "id": 1,
-        "week_date": "31/05/2021",
-        "site": 1
+        "week_date": "May 31, 2021 19:00:00",
+        "site_id": 1
     },
     {
         "id": 2,
-        "week_date": "31/05/2021",
-        "site": 2
+        "week_date": "May 31, 2021 19:00:00",
+        "site_id": 2
     },
     {
         "id": 3,
-        "week_date": "07/06/2021",
-        "site": 1
+        "week_date": "June 07, 2021 19:00:00",
+        "site_id": 1
     }
 
 ]
