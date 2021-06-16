@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/yurikitchin/SiteMate#readme",
   "dependencies": {
+    "@sendgrid/mail": "^7.4.4",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.1",
     "date-fns": "^2.22.1",
