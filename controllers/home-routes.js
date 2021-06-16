@@ -44,5 +44,29 @@ router.get("/sites", async (req, res) => {
     } 
 });
 
+router.get("/schedule", async (req, res) => {
+    if (!req.session.loggedIn) {
+        res.redirect('/');
+    }
+    try {
+        const scheduleData = await Schedule.findAll({include: [
+            {
+                model: Site,
+                
+            }
+        ]})
+        console.log("this is schedule data", scheduleData)
+        const schedule = scheduleData.map((schedule) => schedule.get({plain:true}))
+        console.log("this is scheudule", schedule)
+        res.render("schedule", {
+            loggedIn: req.session.loggedIn,
+            schedule,
+        })
+        
+    } catch (error) {
+        console.error(error.message)
+    } 
+});
+
 
 module.exports = router;
