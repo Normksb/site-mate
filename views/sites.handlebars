@@ -1,0 +1,21 @@
+<div class="Employee-hero">
+    <div class="title">
+        <h1 id="empHeading">Sites</h1>
+    </div>
+
+    <button class="employeeBtn">Add</button>
+    <button class="employeeBtn">Edit</button>
+    <button class="employeeBtn">Delete</button>
+
+    <div class="employee-content">
+        <ul>
+            {{#each site as | data | }}
+            {{>site-data}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
+
+<script src="./js/script.js"></script>
+<script src="./js/login.js"></script>
+</body>
