@@ -10,4 +10,21 @@ router.get("/", (req, res) => {
     } 
 });
 
+router.get("/employees", async (req, res) => {
+    if (!req.session.loggedIn) {
+        res.redirect('/');
+    }
+    try {
+        const employeeData = await Employee.findAll()
+        res.render("employees", {
+            loggedIn: req.session.loggedIn,
+            employeeData
+        })
+        
+    } catch (error) {
+        console.error(error.message)
+    } 
+});
+
+
 module.exports = router;
