@@ -232,3 +232,65 @@
   /* .bigScroll {
     height: 5000px;
   } */
+
+  /* ============== Employees Page ================= */
+
+  .Employee-hero {
+    background-image: url(/images/const.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: flex-start;
+    text-align: center;
+    color: var(--text-light);
+    position: relative;
+    z-index: 10;
+  }
+
+  .Employee-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -10;
+  }
+
+  #empHeading {
+    position: relative;
+    top: 9vh;
+  }
+
+  .employeeBtn {
+    position: relative;
+    top: 17vh;
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    width: 15%;
+    padding: 1rem;
+    margin: 1rem;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .employeeBtn:hover {
+    color: var(--color-4);
+    letter-spacing: 3px;
+  }
+
+  .employee-content {
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
