@@ -49,18 +49,57 @@ router.get("/schedule", async (req, res) => {
         res.redirect('/');
     }
     try {
-        const scheduleData = await Schedule.findAll({include: [
+        const scheduleData = await EmployeeSchedule.findAll({include: [
             {
-                model: Site,
                 
+                model: Schedule,
+                include: [
+                    {
+                        model: Site,
+                    }
+                ],
+                
+                
+            },
+            {
+                model: Employee,
             }
         ]})
         console.log("this is schedule data", scheduleData)
-        const schedule = scheduleData.map((schedule) => schedule.get({plain:true}))
+        const schedule = scheduleData.map((schedule) => {
+            return {
+                
+                site_name: schedule.Schedule.site.site_name,
+                week_date: schedule.Schedule.week_date,
+                name: schedule.Employee.first_name + ' ' + schedule.Employee.last_name,
+
+            }
+        })
         console.log("this is scheudule", schedule)
+
+
+
+        const finalSchedule = []
+     
+        for (let i = 0; i < schedule.length; i++) {
+            const element = schedule[i];
+            const elementTwo = schedule[i++];
+           if (element.site_name === elementTwo.site_name && element.week_date === elementTwo.week_date) {
+            finalSchedule.push(element.site_name)
+        } 
+        }
+        
+        console.log(finalSchedule)
+        
+        // console.log("AAAAAAAAAAAAA", schedule)
+        // console.log("BBBBBBBBBBBBBB", schedule[0].schedule.Employee.first_name + ' ' + schedule[0].schedule.Employee.last_name)
         res.render("schedule", {
-            loggedIn: req.session.loggedIn,
-            schedule,
+            schedule
+            // loggedIn: req.session.loggedIn,
+            // siteId: schedule.site_id,
+            // site_name: schedule.Schedule.site.site_name,
+            // week_date: schedule.Schedule.week_date,
+            // name: schedule.Employee.first_name + ' ' + schedule.Employee.last_name,
         })
         
     } catch (error) {
