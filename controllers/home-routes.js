@@ -76,9 +76,21 @@ router.get("/schedule", async (req, res) => {
             }
         })
         console.log("this is scheudule", schedule)
-        // const finalSchedule = schedule.map((finalSchedule) => {
 
-        // })
+
+
+        const finalSchedule = []
+     
+        for (let i = 0; i < schedule.length; i++) {
+            const element = schedule[i];
+            const elementTwo = schedule[i++];
+           if (element.site_name === elementTwo.site_name && element.week_date === elementTwo.week_date) {
+            finalSchedule.push(element.site_name)
+        } 
+        }
+        
+        console.log(finalSchedule)
+        
         // console.log("AAAAAAAAAAAAA", schedule)
         // console.log("BBBBBBBBBBBBBB", schedule[0].schedule.Employee.first_name + ' ' + schedule[0].schedule.Employee.last_name)
         res.render("schedule", {
