@@ -17,38 +17,35 @@
         <form class="form" action="#">
 
             <section class="slide" id="sunday">
-                <h3>Sunday date: <span id="dateSun"></span></h3>
+                
+                <label for="week">Select a week:</label>
+                <input type="week" id="week" name="week">
+                
 
                 <div class=siteDropdown>
                     <label for="site">Select a job site</label>
                     <select id="site">
-                        <option value="site1">site1</option>
-                        <option value="site2">site2</option>
-                        <option value="site3">site3</option>
-                        <option value="site4">site4</option>
+                        {{#each site as | data |}}
+                        {{>scheduleDropdown}}
+                        {{/each}}
                     </select>
                 </div>
 
-                <div class=EmployeeDropdown>
-                    <label for="employee">Select an employee</label><br>
-                    <input type="checkbox" id="employee1">
-                    <label for="employee1">Employee1</label>
-                    <input type="checkbox" id="employee2">
-                    <label for="employee2">Employee2</label>
-                    <input type="checkbox" id="employee3">
-                    <label for="employee3">Employee3</label>
-                    <input type="checkbox" id="employee4">
-                    <label for="employee4">Dirk Diggler</label>
+                <div class=EmployeeCheckBox>
+                    <h3>Select an employee<h3><br>
+                            {{#each employee as | data |}}
+                            {{>scheduleCheckbox}}
+                            {{/each}}
                 </div>
 
                 <input class="submitBtn" type="submit" value="Submit" />
             </section>
 
-            
+
         </form>
     </section>
-    
-    <div class="employee-content" >
+
+    <div class="employee-content">
         <ul>
             {{#each schedule as | data | }}
             {{>schedule-data}}
