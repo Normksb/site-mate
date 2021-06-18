@@ -14,8 +14,6 @@ signUpBtn.addEventListener("click", showSignUp);
 closeSign.addEventListener("click", hideSignUp);
 
 
-
-
 function showLogin() {
   loginModal.classList.add("display");
   hero.classList.add("blur");
@@ -35,3 +33,5 @@ function hideSignUp() {
   signModal.classList.remove("display");
   hero.classList.remove("blur");
 }
+
+

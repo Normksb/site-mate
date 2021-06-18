@@ -3,9 +3,47 @@
         <h1 id="empHeading">Sites</h1>
     </div>
 
-    <button class="employeeBtn">Add</button>
+    <button class="employeeBtn" id="addSchedule">Add</button>
     <button class="employeeBtn">Edit</button>
     <button class="employeeBtn">Delete</button>
+    {{!-- enter modal for add roster, display none, position reltive (copy sign in modal), modal appear on press add,
+    hide employee content. when you press save, creates post request that populates data base(add route) --}}
+
+    <section class="addScheduleModal">
+        <div class="modalContent">
+            <h1 class="modalTitle">Add Schedule</h1>
+            <button id="closeSign" class="closeBtn">&times;</button>
+        </div>
+        <form class="form" action="#">
+
+            <section class="slide" id="sunday">
+                
+                <label for="week">Select a week:</label>
+                <input type="week" id="week" name="week">
+                
+
+                <div class=siteDropdown>
+                    <label for="site">Select a job site</label>
+                    <select id="site">
+                        {{#each site as | data |}}
+                        {{>scheduleDropdown}}
+                        {{/each}}
+                    </select>
+                </div>
+
+                <div class=EmployeeCheckBox>
+                    <h3>Select an employee<h3><br>
+                            {{#each employee as | data |}}
+                            {{>scheduleCheckbox}}
+                            {{/each}}
+                </div>
+
+                <input class="submitBtn" type="submit" value="Submit" />
+            </section>
+
+
+        </form>
+    </section>
 
     <div class="employee-content">
         <ul>
@@ -21,6 +59,5 @@
     </div>
 </div>
 
-<script src="./js/script.js"></script>
-<script src="./js/login.js"></script>
+<script src="./js/scheduleScript.js"></script>
 </body>
