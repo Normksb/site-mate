@@ -3,11 +3,52 @@
         <h1 id="empHeading">Sites</h1>
     </div>
 
-    <button class="employeeBtn">Add</button>
+    <button class="employeeBtn" id="addSchedule">Add</button>
     <button class="employeeBtn">Edit</button>
     <button class="employeeBtn">Delete</button>
+    {{!-- enter modal for add roster, display none, position reltive (copy sign in modal), modal appear on press add,
+    hide employee content. when you press save, creates post request that populates data base(add route) --}}
 
-    <div class="employee-content">
+    <section class="addScheduleModal">
+        <div class="modalContent">
+            <h1 class="modalTitle">Add Schedule</h1>
+            <button id="closeSign" class="closeBtn">&times;</button>
+        </div>
+        <form class="form" action="#">
+
+            <section class="slide" id="sunday">
+                <h3>Sunday date: <span id="dateSun"></span></h3>
+
+                <div class=siteDropdown>
+                    <label for="site">Select a job site</label>
+                    <select id="site">
+                        <option value="site1">site1</option>
+                        <option value="site2">site2</option>
+                        <option value="site3">site3</option>
+                        <option value="site4">site4</option>
+                    </select>
+                </div>
+
+                <div class=EmployeeDropdown>
+                    <label for="employee">Select an employee</label><br>
+                    <input type="checkbox" id="employee1">
+                    <label for="employee1">Employee1</label>
+                    <input type="checkbox" id="employee2">
+                    <label for="employee2">Employee2</label>
+                    <input type="checkbox" id="employee3">
+                    <label for="employee3">Employee3</label>
+                    <input type="checkbox" id="employee4">
+                    <label for="employee4">Dirk Diggler</label>
+                </div>
+
+                <input class="submitBtn" type="submit" value="Submit" />
+            </section>
+
+            
+        </form>
+    </section>
+    
+    <div class="employee-content" >
         <ul>
             {{#each schedule as | data | }}
             {{>schedule-data}}
@@ -21,6 +62,5 @@
     </div>
 </div>
 
-<script src="./js/script.js"></script>
-<script src="./js/login.js"></script>
+<script src="./js/scheduleScript.js"></script>
 </body>
