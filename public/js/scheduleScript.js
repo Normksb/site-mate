@@ -33,7 +33,7 @@ function showAddSched() {
     // console.log("here is employee", employee)
     // console.log("week is", week)
     // console.log("here is site", site)
-    console.log(employeeArray.toString())
+    console.log(JSON.parse(JSON.stringify(employeeArray)))
    
     // if (first_name && last_name && email && password) {
     //   const response = await fetch("/api/users", {
