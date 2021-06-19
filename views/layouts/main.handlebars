@@ -15,10 +15,14 @@
           {{#if loggedIn}}
           <a id="employeesBtn" href="/employees">Employees</a>
           {{/if}}
-          <a id="sitesBtn" href="/sites">Sites</a>
-          <a id="scheduleBtn" href="/schedule">Schedule</a>
           {{#if loggedIn}}
-          <a id="signOutBtn" href="#">Sign Out</a>
+          <a id="sitesBtn" href="/sites">Sites</a>
+          {{/if}}
+          {{#if loggedIn}}
+          <a id="scheduleBtn" href="/schedule">Schedule</a>
+          {{/if}}
+          {{#if loggedIn}}
+          <a id="logout" href="#">Sign Out</a>
           {{else}}
           <a id="signUpBtn" href="#">Sign in</a>
           {{/if}}
@@ -28,6 +32,13 @@
 
   
       {{{body}}}
-    
+
+
+   <script src="./js/script.js"></script>
+   {{#if loggedIn}}
+   <script src="./js/logout.js" ></script>
+   {{else}}
+   <script src="./js/login.js"></script>
+   {{/if}} 
 </body>
 </html>
