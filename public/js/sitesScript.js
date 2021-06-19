@@ -17,6 +17,7 @@ closeSign.addEventListener("click", hideSignUp);
 
 function showDelete() {
   deleteSiteModal.classList.add("display");
+  hero.classList.add("blur")
   }
   
   function hideDelete() {

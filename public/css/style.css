@@ -121,7 +121,7 @@
   
   /* ================= Sign in/up Modals =================== */
   
-  .signModal, .loginModal, .deleteEmployeeModal {
+  .signModal, .loginModal, .deleteEmployeeModal, .deleteSiteModal {
     display: flex;
     opacity: 0;
     position: fixed;

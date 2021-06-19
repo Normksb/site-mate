@@ -60,6 +60,7 @@ const signupFormHandler = async (event) => {
     }
   };
 
+  // ============ Delete Employee ================== 
   const deleteEmployee = async (event) => {
     event.preventDefault();
   
