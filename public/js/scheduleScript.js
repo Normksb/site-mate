@@ -21,33 +21,26 @@ function showAddSched() {
   const newRosterHandler = async (event) => {
     event.preventDefault();
     const employeeData = document.querySelectorAll('input[name="employee"]:checked');
+    console.log('employee list:', employeeData)
     let employeeArray = [];
     employeeData.forEach((Data) => {
         employeeArray.push(Data.value)
+    
     });
-
+    console.log('employee Array:', employeeArray)
 
     const week = document.querySelector("#week").value.trim();
     const site = document.querySelector("#site").value.trim();
+    console.log('week Array:', week)
+    console.log('site Array:', site)
+
     
-    // console.log("here is employee", employee)
-    // console.log("week is", week)
-    // console.log("here is site", site)
-    console.log(JSON.parse(JSON.stringify(employeeArray)))
+
+
+
+
    
-    // if (first_name && last_name && email && password) {
-    //   const response = await fetch("/api/users", {
-    //     method: "POST",
-    //     body: JSON.stringify({ first_name, last_name, email, password }),
-    //     headers: { "Content-Type": "application/json" },
-    //   });
-  
-    //   if (response.ok) {
-    //     document.location.replace("/");
-    //   } else {
-    //     alert("Failed to sign up.");
-    //   }
-    // }
+
   };
 
 

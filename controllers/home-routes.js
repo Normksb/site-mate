@@ -81,21 +81,9 @@ router.get("/schedule", async (req, res) => {
 }
         
         )
-        // const newScheduleData = scheduleData.get({ plain:true})
         const newScheduleData = scheduleData.map((schedule) => schedule.get({plain:true}))
         console.log("this is New schedule data", newScheduleData)
-        // console.log("this is schedule data", scheduleData)
 
-        // const schedule = scheduleData.map((schedule) => {
-        //     return {
-                
-        //         site_name: schedule.Schedule.site.site_name,
-        //         week_date: schedule.Schedule.week_date,
-        //         name: schedule.Employee.first_name + ' ' + schedule.Employee.last_name,
-
-        //     }
-        // })
-        // console.log("this is scheudule", schedule)
 
         res.render("schedule", {
             loggedIn: req.session.loggedIn,
