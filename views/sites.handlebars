@@ -3,7 +3,7 @@
         <h1 id="empHeading">Sites</h1>
     </div>
 
-    <button class="employeeBtn">Add</button>
+    <button id="addBtn" class="employeeBtn">Add</button>
     <button class="employeeBtn">Edit</button>
     <button class="employeeBtn">Delete</button>
 
@@ -15,6 +15,32 @@
         </ul>
     </div>
 </div>
+
+<section class="signModal">
+      <div class="modalContent">
+        <h1 class="modalTitle">Add Site</h1>
+        <button id="closeSign" class="closeBtn">&times;</button>
+      </div>
+      <form class="form" action="#">
+
+        <label for="siteName"></label>
+        <input type="text" id="siteName" autocomplete="name" placeholder="Site Name" />
+
+        <label for="siteAddress"></label>
+        <input type="text" id="siteAddress" autocomplete="name" placeholder="Site Address" />
+
+        <label for="siteNotes"></label>
+        <input type="text" id="siteNotes" autocomplete="text" placeholder="Site Notes" />
+
+        <label for="siteContact"></label>
+        <input type="text" id="siteContact" autocomplete="text" placeholder="Site Contact" />
+
+        <label for="contactPhone"></label>
+        <input type="text" id="contactPhone" autocomplete="text" placeholder="Contact Phone" />
+
+        <input class="submitBtn" type="submit" value="Submit" />
+      </form>
+    </section>
 
 <script src="./js/sitesScript.js"></script>
 

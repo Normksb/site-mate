@@ -31,6 +31,8 @@ router.get("/employees", async (req, res) => {
     } 
 });
 
+
+// ========== Sites ================
 router.get("/sites", async (req, res) => {
     if (!req.session.loggedIn) {
         res.redirect('/');
