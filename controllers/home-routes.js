@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Employee, EmployeeSchedule, Schedule, Site } = require('../models');
 
+// ================= Homepage =======================
 router.get("/", (req, res) => {
     try {
         res.render("homepage", {
@@ -12,6 +13,7 @@ router.get("/", (req, res) => {
     } 
 });
 
+// ================== Employees =====================
 router.get("/employees", async (req, res) => {
     if (!req.session.loggedIn) {
         res.redirect('/');
@@ -46,6 +48,7 @@ router.get("/sites", async (req, res) => {
     } 
 });
 
+// ================ Schedule ==================
 router.get("/schedule", async (req, res) => {
     if (!req.session.loggedIn) {
         res.redirect('/');
@@ -64,28 +67,37 @@ router.get("/schedule", async (req, res) => {
                         model: Site,
                     }
                 ],
+                group: 'week_date'
                 
                 
             },
             {
                 model: Employee,
-            }
-        ]})
-        console.log("this is schedule data", scheduleData)
-        const schedule = scheduleData.map((schedule) => {
-            return {
-                
-                site_name: schedule.Schedule.site.site_name,
-                week_date: schedule.Schedule.week_date,
-                name: schedule.Employee.first_name + ' ' + schedule.Employee.last_name,
+            },
+        ],
+    group: 'schedule_id'
+}
+        
+        )
+        // const newScheduleData = scheduleData.get({ plain:true})
+        const newScheduleData = scheduleData.map((schedule) => schedule.get({plain:true}))
+        console.log("this is New schedule data", newScheduleData)
+        // console.log("this is schedule data", scheduleData)
 
-            }
-        })
-        console.log("this is scheudule", schedule)
+        // const schedule = scheduleData.map((schedule) => {
+        //     return {
+                
+        //         site_name: schedule.Schedule.site.site_name,
+        //         week_date: schedule.Schedule.week_date,
+        //         name: schedule.Employee.first_name + ' ' + schedule.Employee.last_name,
+
+        //     }
+        // })
+        // console.log("this is scheudule", schedule)
 
         res.render("schedule", {
             loggedIn: req.session.loggedIn,
-            schedule,
+            schedule: newScheduleData,
             employee,
             site
         })
