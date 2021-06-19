@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Employee } = require('../../models');
+const { Employee, Site, Schedule, EmployeeSchedule } = require('../../models');
 
 //login
 router.post('/login', async (req, res) => {
@@ -74,6 +74,28 @@ router.post('/login', async (req, res) => {
       });
     } else {
       res.status(404).end();
+    }
+  });
+
+  // ==============  Sites =================
+
+  router.post('/sites', async (req, res) => {
+    try {
+      const siteData = await Site.create({
+        site_name: req.body.siteName,
+        site_address: req.body.siteAddress,
+        site_notes: req.body.siteNotes,
+        contact_name: req.body.siteContact,
+        contact_phone: req.body.contactPhone,
+      });
+  
+      req.session.save(() => {
+        req.session.loggedIn = true;
+        res.status(200).json(siteData);
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
     }
   });
 
