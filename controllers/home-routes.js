@@ -3,7 +3,9 @@ const { Employee, EmployeeSchedule, Schedule, Site } = require('../models');
 
 router.get("/", (req, res) => {
     try {
-        res.render("homepage")
+        res.render("homepage", {
+            loggedIn: req.session.loggedIn,  
+        })
         
     } catch (error) {
         console.error(error.message)
@@ -82,6 +84,7 @@ router.get("/schedule", async (req, res) => {
         console.log("this is scheudule", schedule)
 
         res.render("schedule", {
+            loggedIn: req.session.loggedIn,
             schedule,
             employee,
             site
