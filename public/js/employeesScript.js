@@ -6,6 +6,9 @@ const signModal = document.querySelector(".signModal");
 const hero = document.querySelector(".hero");
 const closeSign = document.querySelector("#closeSign");
 const signUpBtn = document.querySelector("#signBtn");
+const deleteEmployeeModal = document.querySelector(".deleteEmployeeModal");
+const deleteEmployeeBtn = document.querySelector(".deleteEmployeeBtn");
+const dltBtn = document.querySelector("#dltBtn");
 
 
 addBtn.addEventListener("click", showSignUp);

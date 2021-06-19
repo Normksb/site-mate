@@ -5,7 +5,7 @@
 
     <button id="addBtn" class="employeeBtn">Add</button>
     <button class="employeeBtn">Edit</button>
-    <button class="employeeBtn">Delete</button>
+    <button id="dltBtn" class="employeeBtn">Delete</button>
 
     <div class="employee-content">
         <ul>
@@ -39,6 +39,20 @@
         <input type="password" id="confirm-password-signup" autocomplete="new-password" placeholder="Confirm Password" />
 
         <input class="submitBtn" type="submit" value="Submit" />
+      </form>
+    </section>
+
+<section class="deleteEmployeeModal">
+      <div class="modalContent">
+        <h1 class="modalTitle">Delete Employee</h1>
+        <button id="closeSign" class="closeBtn">&times;</button>
+      </div>
+      <form class="form" action="#">
+
+            {{#each employee as | data | }}
+            {{>employee-delete}}
+            {{/each}}
+        <input class="deleteEmployeeBtn" type="submit" value="Submit" />
       </form>
     </section>
        <script src="./js/employeesScript.js"></script>
