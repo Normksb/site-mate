@@ -19,10 +19,7 @@ Schedule.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    employee_schedule: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+    
   },
   {
     sequelize,

@@ -138,6 +138,39 @@ router.post('/login', async (req, res) => {
         res.status(500).json(err);
       }
     });
+
+    // =============== Schedule =================
+
+    router.post('/schedule', async (req, res) => {
+      try {
+        const scheduleData = await Schedule.create({
+          week_date: req.body.week,
+          site_id: req.body.site,
+          
+        });
+    console.log('AAAAAAAAAAAAAAAAAAA', scheduleData.id)
+        const schedId = scheduleData.id
+        const empArray = req.body.employeeArray;
+
+        empArray.forEach(async employee => {
+          const employeeSchedule = await EmployeeSchedule.create({
+          schedule_id: schedId,
+          employee_id: employee,
+        });
+        });
+
+        
+
+        req.session.save(() => {
+          req.session.loggedIn = true;
+          res.status(200).json(scheduleData);
+        });
+
+      } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+      }
+    });
   
 
   module.exports = router

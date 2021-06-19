@@ -31,10 +31,25 @@ function showAddSched() {
 
     const week = document.querySelector("#week").value.trim();
     const site = document.querySelector("#site").value.trim();
+
+    if (week && site && employeeArray) {
+      const response = await fetch("/api/users/schedule", {
+        method: "POST",
+        body: JSON.stringify({ week, site, employeeArray }),
+        headers: { "Content-Type": "application/json" },
+      });
+  
+      if (response.ok) {
+        document.location.replace("/schedule");
+      } else {
+        alert("Failed to add schedule.");
+      }
+    }
+
     console.log('week Array:', week)
     console.log('site Array:', site)
 
-    
+
 
 
 

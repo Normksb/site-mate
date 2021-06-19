@@ -58,6 +58,7 @@ router.get("/schedule", async (req, res) => {
     try {
         const employeeData = await Employee.findAll()
         const employee = employeeData.map((employee) => employee.get({plain:true}))
+        // console.log('XXXXXXXXXXXXXXXXXXXX',employee)
         const siteData = await Site.findAll()
         const site = siteData.map((site) => site.get({plain:true}))
         const scheduleData = await EmployeeSchedule.findAll({include: [
@@ -69,7 +70,7 @@ router.get("/schedule", async (req, res) => {
                         model: Site,
                     }
                 ],
-                group: 'week_date'
+                // group: 'week_date'
                 
                 
             },
@@ -77,17 +78,26 @@ router.get("/schedule", async (req, res) => {
                 model: Employee,
             },
         ],
-    group: 'schedule_id'
+    // group: 'schedule_id'
 }
         
         )
         const newScheduleData = scheduleData.map((schedule) => schedule.get({plain:true}))
-        console.log("this is New schedule data", newScheduleData)
+        console.log("DDDDDDDDDDDDDDDDDDthis is New schedule data", newScheduleData)
 
+        employeeArray = []
+        newScheduleData.forEach(element => {
+            employeeArray.push(element.Employee.first_name) 
+            employeeArray.push(element.Employee.last_name) 
+        });
+        console.log(employeeArray)
+        
 
         res.render("schedule", {
             loggedIn: req.session.loggedIn,
             schedule: newScheduleData,
+            // first_name: newScheduleData.Employee.first_name,
+            // last_name: newScheduleData.Employee.last_name,
             employee,
             site
         })

@@ -2,20 +2,18 @@
     {
         "id": 1,
         "week_date": "May 31, 2021 19:00:00",
-        "site_id": 1,
-        "employee_schedule": "Yuri Kitchen, Brett Treweek"
+        "site_id": 1
     },
     {
         "id": 2,
         "week_date": "May 31, 2021 19:00:00",
-        "site_id": 2,
-        "employee_schedule": "Norm Bernard"
+        "site_id": 2
     },
     {
         "id": 3,
         "week_date": "June 07, 2021 19:00:00",
-        "site_id": 1,
-        "employee_schedule": "Yuri Kitchen, Brett Treweek, Norm Bernard"
+        "site_id": 1
+        
     }
 
 ]
