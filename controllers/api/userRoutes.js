@@ -99,4 +99,45 @@ router.post('/login', async (req, res) => {
     }
   });
 
+  router.delete('/sites', async (req, res) => {
+    try {
+      console.log("here is the request body ",req.body)
+      const siteData = await Site.destroy({
+        where: {
+          id: req.body.site,
+        },
+      });
+  
+      req.session.save(() => {
+        req.session.loggedIn = true;
+        res.status(200).json(siteData);
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
+
+    // ==============  Employees =================
+
+    router.delete('/employees', async (req, res) => {
+      try {
+        console.log("here is the request body ",req.body)
+        const employeeData = await Employee.destroy({
+          where: {
+            id: req.body.employee,
+          },
+        });
+    
+        req.session.save(() => {
+          req.session.loggedIn = true;
+          res.status(200).json(employeeData);
+        });
+      } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+      }
+    });
+  
+
   module.exports = router

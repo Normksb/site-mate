@@ -16,7 +16,7 @@ addBtn.addEventListener("click", showSignUp);
 closeSign.addEventListener("click", hideSignUp);
 dltBtn.addEventListener("click", showDelete);
 closeSign2.addEventListener("click", hideDelete);
-deleteEmployeeBtn.addEventListener("click", deleteEmployee);
+
 
 function showDelete() {
   hero.classList.add("blur");
@@ -81,6 +81,7 @@ const signupFormHandler = async (event) => {
     }
   };
 
+deleteEmployeeBtn.addEventListener("click", deleteEmployee);
   document
 .querySelector('.submitBtn')
 .addEventListener('click', signupFormHandler);
