@@ -4,10 +4,7 @@
     </div>
 
     <button class="employeeBtn" id="addSchedule">Add</button>
-    <button class="employeeBtn">Edit</button>
     <button class="employeeBtn">Delete</button>
-    {{!-- enter modal for add roster, display none, position reltive (copy sign in modal), modal appear on press add,
-    hide employee content. when you press save, creates post request that populates data base(add route) --}}
 
     <section class="addScheduleModal">
         <div class="modalContent">
@@ -48,14 +45,9 @@
     </section>
 
     <div class="employee-content">
-        <ul>
             {{#each schedule as | data | }}
             {{>schedule-data}}
-            {{#each EmployeeSchedules as | name |}}
-            {{>schedule-name}}
             {{/each}}
-            {{/each}}
-        </ul>
     </div>
 </div>
 
