@@ -51,13 +51,12 @@
         <ul>
             {{#each schedule as | data | }}
             {{>schedule-data}}
-            {{/each}}
-        </ul>
-        <ul>
-            {{#each schedule.first_name as | name |}}
+            {{#each EmployeeSchedules as | name |}}
             {{>schedule-name}}
             {{/each}}
+            {{/each}}
         </ul>
+        
     </div>
 </div>
 
