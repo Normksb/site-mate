@@ -177,7 +177,7 @@ router.post("/schedule", async (req, res) => {
         from: "demositemate@gmail.com",
         subject: "Your work schedule from Site Mate",
         text: "You have a work schedule from Site Mate",
-        html: `<h1>You are scheduled to work at ${siteName.site_name} on the ${formatDate(date)}</h1>`,
+        html: `<h1>You are scheduled to work at ${siteName.site_name} on the ${formatDate(date)}.</h1><br><h2>Contact details for this site are ${siteName.contact_name}, Phone: ${siteName.contact_phone}`,
       };
   
       sgMail
