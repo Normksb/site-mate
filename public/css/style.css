@@ -124,9 +124,8 @@
     top: -10%;
     left: 110%;
     transform: translate(-50%, -50%);
-    max-width: 100%;
-    max-height: 100%;
-    flex-direction: column;
+    max-width: 90vw;
+    max-height: 90vh;
     align-items: center;
     justify-content: center;
     padding: 3rem;
@@ -325,9 +324,6 @@
     margin-right: 1rem;
   } 
 
-  .deleteEmployeeModal, .deleteSiteModal  {
-    width: 50vw;
-  }
 
   /* ============== Schedule Page ================= */
   .addScheduleModal {
@@ -337,8 +333,8 @@
   top: -10%;
   left: 110%;
   transform: translate(-50%, -50%);
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 90%;
+  max-height: 90%;
   flex-direction: column;
   padding: 3rem;
   border-radius: 10px;
@@ -440,4 +436,71 @@
 
 .checkbox {
   display: flex;
+}
+
+/* ============== Media Queries ==================== */
+@media (max-width: 900px) {
+  .employee-content{
+    flex-direction: column;
+    top: 30vh;
+  }
+
+  #logo, #employeesBtn, #sitesBtn, #scheduleBtn, #logout, #signUpBtn {
+    font-size: 1rem !important;
+    width:auto;
+  }
+
+  #homeTitle {
+    font-size: 4rem;
+  }
+
+  #homeText {
+    font-size: 1.5rem;
+  }
+
+  #scheduleCard{
+    top: 50%;
+  }
+
+  .checkbox {
+    flex-direction: column;
+  }
+
+  .addScheduleModal {
+    top: 55%;
+  }
+}
+
+@media (max-width: 500px) {
+
+  #logo, #employeesBtn, #sitesBtn, #scheduleBtn, #logout {
+    font-size: 0.7rem !important;
+  }
+
+  #addSchedule, #addBtn, #deleteBtn {
+  transform: translate(-50%, -50%);
+  top: 12%;
+  left: 45%;
+  width: 25%;
+}
+
+#dltBtn {
+  transform: translate(-50%, -50%);
+  width: 25%;
+  top: 2.2%;
+  left: 15%;
+}
+
+#empHeading{
+  display: none;
+}
+
+#homeTitle {
+  font-size: 3rem;
+}
+
+#homeText {
+  font-size: 1rem;
+}
+  
 }
