@@ -3,21 +3,21 @@
         "id": 1,
         "first_name": "Yuri",
         "last_name": "Kitchen",
-        "email": "yuri@site.net",
+        "email": "demositemate@gmail.com",
         "password": "123456"
     },
     {
         "id": 2,
         "first_name": "Brett",
         "last_name": "Treweek",
-        "email": "brett@site.net",
+        "email": "demositemate@gmail.com",
         "password": "123456"
     },
     {
         "id": 3,
         "first_name": "Norm",
         "last_name": "Bernard",
-        "email": "norm@site.net",
+        "email": "demositemate@gmail.com",
         "password": "123456"
     }
 ]
