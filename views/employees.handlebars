@@ -1,46 +1,61 @@
 <div class="Employee-hero">
-    <div class="title">
-        <h1 id="empHeading">Employees</h1>
-    </div>
+  <div class="title">
+    <h1 id="empHeading">Employees</h1>
+  </div>
 
-    <button id="addBtn" class="employeeBtn">Add</button>
-    <button class="employeeBtn">Edit</button>
-    <button class="employeeBtn">Delete</button>
+  <button id="addBtn" class="employeeBtn">Add</button>
+  <button class="employeeBtn">Edit</button>
+  <button id="dltBtn" class="employeeBtn">Delete</button>
 
-    <div class="employee-content">
-        <ul>
-            {{#each employee as | data | }}
-            {{>employees-data}}
-            {{/each}}
-        </ul>
-    </div>
+  <div class="employee-content">
+    <ul>
+      {{#each employee as | data | }}
+      {{>employees-data}}
+      {{/each}}
+    </ul>
+  </div>
 </div>
 
 <section class="signModal">
-      <div class="modalContent">
-        <h1 class="modalTitle">Sign Up</h1>
-        <button id="closeSign" class="closeBtn">&times;</button>
-      </div>
-      <form class="form" action="#">
+  <div class="modalContent">
+    <h1 class="modalTitle">Sign Up</h1>
+    <button id="closeSign" class="closeBtn">&times;</button>
+  </div>
+  <form class="form" action="#">
 
-        <label for="firstName-signup"></label>
-        <input type="text" id="firstName-signup" autocomplete="name" placeholder="First name" />
+    <label for="firstName-signup"></label>
+    <input type="text" id="firstName-signup" autocomplete="name" placeholder="First name" />
 
-        <label for="lastName-signup"></label>
-        <input type="text" id="lastName-signup" autocomplete="name" placeholder="Last name" />
+    <label for="lastName-signup"></label>
+    <input type="text" id="lastName-signup" autocomplete="name" placeholder="Last name" />
 
-        <label for="email-signup"></label>
-        <input type="email" id="email-signup" autocomplete="email" placeholder="email" />
+    <label for="email-signup"></label>
+    <input type="email" id="email-signup" autocomplete="email" placeholder="email" />
 
-        <label for="password-signup"></label>
-        <input type="password" id="password-signup" autocomplete="new-password" placeholder="Password" />
+    <label for="password-signup"></label>
+    <input type="password" id="password-signup" autocomplete="new-password" placeholder="Password" />
 
-        <label for="confirm-password-signup"></label>
-        <input type="password" id="confirm-password-signup" autocomplete="new-password" placeholder="Confirm Password" />
+    <label for="confirm-password-signup"></label>
+    <input type="password" id="confirm-password-signup" autocomplete="new-password" placeholder="Confirm Password" />
 
-        <input class="submitBtn" type="submit" value="Submit" />
-      </form>
-    </section>
-       <script src="./js/employeesScript.js"></script>
+    <input class="submitBtn" type="submit" value="Submit" />
+  </form>
+</section>
+
+<section class="deleteEmployeeModal">
+  <div class="modalContent">
+    <h1 class="modalTitle">Delete Employee</h1>
+    <button id="closeSign2" class="closeBtn">&times;</button>
+  </div>
+  <label for="Employee">Select an Employee</label>
+  <select id="employee">
+
+    {{#each employee as | data | }}
+    {{>employee-delete}}
+    {{/each}}
+  </select>
+  <input class="deleteEmployeeBtn", type="submit" value="Submit" />
+</section>
+<script src="./js/employeesScript.js"></script>
 
 </body>

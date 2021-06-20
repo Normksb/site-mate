@@ -5,7 +5,7 @@
 
     <button id="addBtn" class="employeeBtn">Add</button>
     <button class="employeeBtn">Edit</button>
-    <button class="employeeBtn">Delete</button>
+    <button id="deleteBtn" class="employeeBtn">Delete</button>
 
     <div class="employee-content">
         <ul>
@@ -41,6 +41,21 @@
         <input class="submitBtn" type="submit" value="Submit" />
       </form>
     </section>
+
+<section class="deleteSiteModal">
+  <div class="modalContent">
+    <h1 class="modalTitle">Delete Site</h1>
+    <button id="closeSign2" class="closeDeleteBtn">&times;</button>
+  </div>
+  <label for="site">Select an Site</label>
+  <select id="site">
+
+    {{#each site as | data | }}
+    {{>site-delete}}
+    {{/each}}
+  </select>
+  <input class="deleteSiteBtn", type="submit" value="Submit" />
+</section>
 
 <script src="./js/sitesScript.js"></script>
 

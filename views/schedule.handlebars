@@ -1,6 +1,6 @@
 <div class="Employee-hero">
     <div class="title">
-        <h1 id="empHeading">Sites</h1>
+        <h1 id="empHeading">Schedule</h1>
     </div>
 
     <button class="employeeBtn" id="addSchedule">Add</button>
@@ -16,11 +16,13 @@
         </div>
         <form class="form" action="#">
 
-            <section class="slide" id="sunday">
+            <section>
                 
-                <label for="week">Select a week:</label>
-                <input type="week" id="week" name="week">
+                <label for="week">Select a start date:</label>
+                <input type="date" id="week" name="week" value="date">
+
                 
+
 
                 <div class=siteDropdown>
                     <label for="site">Select a job site</label>
@@ -49,11 +51,9 @@
         <ul>
             {{#each schedule as | data | }}
             {{>schedule-data}}
-            {{/each}}
-        </ul>
-        <ul>
-            {{#each schedule.first_name as | name |}}
+            {{#each EmployeeSchedules as | name |}}
             {{>schedule-name}}
+            {{/each}}
             {{/each}}
         </ul>
     </div>
