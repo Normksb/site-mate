@@ -1,4 +1,7 @@
-
-        <li>{{format_date week_date}}</li>
-        <li>{{site.site_name}}</li>
-    
+<div class="employeeCard">
+  <h4>{{site.site_name}}</h4>
+  <p>{{format_date week_date}}</p>
+  {{#each EmployeeSchedules as | name |}}
+  {{>schedule-name}}
+  {{/each}}
+</div>

@@ -4,10 +4,6 @@
     </div>
 
     <button class="employeeBtn" id="addSchedule">Add</button>
-    <button class="employeeBtn">Edit</button>
-    <button class="employeeBtn">Delete</button>
-    {{!-- enter modal for add roster, display none, position reltive (copy sign in modal), modal appear on press add,
-    hide employee content. when you press save, creates post request that populates data base(add route) --}}
 
     <section class="addScheduleModal">
         <div class="modalContent">
@@ -21,9 +17,6 @@
                 <label for="week">Select a start date:</label>
                 <input type="date" id="week" name="week" value="date">
 
-                
-
-
                 <div class=siteDropdown>
                     <label for="site">Select a job site</label>
                     <select id="site">
@@ -35,11 +28,10 @@
 
                 <div class=EmployeeCheckBox>
                     <h3>Select an employee<h3><br>
-                            {{#each employee as | data |}}
-                            {{>scheduleCheckbox}}
-                            {{/each}}
+                        {{#each employee as | data |}}
+                        {{>scheduleCheckbox}}
+                        {{/each}}
                 </div>
-
                 <input class="submitBtn" type="submit" value="Submit" />
             </section>
 
@@ -48,14 +40,9 @@
     </section>
 
     <div class="employee-content">
-        <ul>
             {{#each schedule as | data | }}
             {{>schedule-data}}
-            {{#each EmployeeSchedules as | name |}}
-            {{>schedule-name}}
             {{/each}}
-            {{/each}}
-        </ul>
     </div>
 </div>
 
