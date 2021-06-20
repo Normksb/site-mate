@@ -9,12 +9,10 @@ closeSign.addEventListener("click", hideSignUp);
 // Add Schedule functions
 function showAddSched() {
     scheduleModal.classList.add("display");
-    
   }
   
   function hideSignUp() {
     scheduleModal.classList.remove("display");
-   
   }
 
   //handle modal form
