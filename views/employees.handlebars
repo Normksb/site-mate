@@ -4,15 +4,15 @@
   </div>
 
   <button id="addBtn" class="employeeBtn">Add</button>
-  <button class="employeeBtn">Edit</button>
+  {{!-- <button class="employeeBtn">Edit</button> --}}
   <button id="dltBtn" class="employeeBtn">Delete</button>
 
   <div class="employee-content">
-    <ul>
+    
       {{#each employee as | data | }}
       {{>employees-data}}
       {{/each}}
-    </ul>
+    
   </div>
 </div>
 

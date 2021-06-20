@@ -112,7 +112,6 @@
   .header ul a:hover, #logo:hover {
     color: var(--color-4);
     letter-spacing: 3px;
-    /* transition: all 0.3s ease-in-out; */
   }
   
   
@@ -285,11 +284,23 @@
   }
 
   .employee-content {
+    display: flex;
+    /* flex-direction: column; */
     position: relative;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
 
+  .employeeCard {
+    background-color: var(--text-dark);
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .employeeCard li {
+    list-style-type: none;
   }
 
   /* ============== Schedule Page ================= */
