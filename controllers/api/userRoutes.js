@@ -174,7 +174,7 @@ router.post("/schedule", async (req, res) => {
 
       const msg = {
         to: `${empEmail.email}`,
-        from: "nksb414@gmail.com",
+        from: "demositemate@gmail.com",
         subject: "Your work schedule from Site Mate",
         text: "You have a work schedule from Site Mate",
         html: `<h1>You are scheduled to work at ${siteName.site_name} on the ${formatDate(date)}</h1>`,
