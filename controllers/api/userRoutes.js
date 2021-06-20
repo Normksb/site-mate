@@ -158,23 +158,35 @@ router.post("/schedule", async (req, res) => {
     const date = req.body.week;
     const site = req.body.site;
 
-    const msg = {
-      to: "bretttrew@gmail.com",
-      from: "nksb414@gmail.com",
-      subject: "Your work schedule from Site Mate",
-      text: "You have a work schedule from Site Mate",
-      html: `<h1>you are scheduled to work at ${site} on the ${date}</h1>`,
-    };
+    
 
-    sgMail
-      .send(msg)
-      .then((response) => {
-        console.log(response[0].statusCode);
-        console.log(response[0].headers);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    const siteName = await Site.findByPk(site)
+    // console.log('MMMMMMMMMMMMMMMMMMMMMMMMMMMM',siteName)
+
+    empArray.forEach(async employee => {
+      const empEmail = await Employee.findByPk(employee)
+
+      const msg = {
+        to: `${empEmail.email}`,
+        from: "nksb414@gmail.com",
+        subject: "Your work schedule from Site Mate",
+        text: "You have a work schedule from Site Mate",
+        html: `<h1>You are scheduled to work at ${siteName.site_name} on the ${date}</h1>`,
+      };
+  
+      sgMail
+        .send(msg)
+        .then((response) => {
+          console.log(response[0].statusCode);
+          console.log(response[0].headers);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+
+    });
+
+    
 
     empArray.forEach(async (employee) => {
       const employeeSchedule = await EmployeeSchedule.create({
