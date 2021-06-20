@@ -10,14 +10,14 @@
         "id": 2,
         "first_name": "Brett",
         "last_name": "Treweek",
-        "email": "demositemate@gmail.com",
+        "email": "brett@site.net",
         "password": "123456"
     },
     {
         "id": 3,
         "first_name": "Norm",
         "last_name": "Bernard",
-        "email": "demositemate@gmail.com",
+        "email": "norm@site.net",
         "password": "123456"
     }
 ]
