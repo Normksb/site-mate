@@ -81,7 +81,7 @@ router.get("/schedule", async (req, res) => {
     const newScheduleData = scheduleData.map((schedule) =>
       schedule.get({ plain: true })
     );
-    console.log("DDDDDDDDDDDDDDDDDDthis is New schedule data", newScheduleData);
+    console.log("DDDDDDDDDDDDDDDDDDthis is New schedule data", newScheduleData[0].EmployeeSchedules[0].Employee.email);
 
     res.render("schedule", {
       loggedIn: req.session.loggedIn,
