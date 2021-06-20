@@ -4,7 +4,6 @@
     </div>
 
     <button class="employeeBtn" id="addSchedule">Add</button>
-    <button class="employeeBtn">Delete</button>
 
     <section class="addScheduleModal">
         <div class="modalContent">
@@ -18,9 +17,6 @@
                 <label for="week">Select a start date:</label>
                 <input type="date" id="week" name="week" value="date">
 
-                
-
-
                 <div class=siteDropdown>
                     <label for="site">Select a job site</label>
                     <select id="site">
@@ -32,11 +28,10 @@
 
                 <div class=EmployeeCheckBox>
                     <h3>Select an employee<h3><br>
-                            {{#each employee as | data |}}
-                            {{>scheduleCheckbox}}
-                            {{/each}}
+                        {{#each employee as | data |}}
+                        {{>scheduleCheckbox}}
+                        {{/each}}
                 </div>
-
                 <input class="submitBtn" type="submit" value="Submit" />
             </section>
 
