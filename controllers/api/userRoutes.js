@@ -3,6 +3,8 @@ const { Employee, Site, Schedule, EmployeeSchedule } = require("../../models");
 const sgMail = require("@sendgrid/mail");
 require("dotenv").config();
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+// const helpers = require('./utils/helpers');
+
 
 //login
 router.post("/login", async (req, res) => {
@@ -158,6 +160,10 @@ router.post("/schedule", async (req, res) => {
     const date = req.body.week;
     const site = req.body.site;
 
+    function formatDate(date) {
+      return `${new Date(date).getDate()}/${new Date(date).getUTCMonth() + 1}/${new Date(date).getFullYear()}`
+    }
+
     
 
     const siteName = await Site.findByPk(site)
@@ -171,7 +177,7 @@ router.post("/schedule", async (req, res) => {
         from: "nksb414@gmail.com",
         subject: "Your work schedule from Site Mate",
         text: "You have a work schedule from Site Mate",
-        html: `<h1>You are scheduled to work at ${siteName.site_name} on the ${date}</h1>`,
+        html: `<h1>You are scheduled to work at ${siteName.site_name} on the ${formatDate(date)}</h1>`,
       };
   
       sgMail
