@@ -10,6 +10,8 @@
             <h1 class="modalTitle">Add Schedule</h1>
             <button id="closeSign" class="closeBtn">&times;</button>
         </div>
+
+        
         <form class="form" action="#">
 
             <section>
@@ -28,9 +30,12 @@
 
                 <div class=EmployeeCheckBox>
                     <h3>Select an employee<h3><br>
+                    <div class="checkbox">
                         {{#each employee as | data |}}
                         {{>scheduleCheckbox}}
                         {{/each}}
+                    </div>
+                        
                 </div>
                 <input class="submitBtn" type="submit" value="Submit" />
             </section>
