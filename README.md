@@ -5,9 +5,9 @@
   
   ![alt text](./public/images/screenshot.PNG)
   
-[Here is a link to the deployed app on Heroku]()
+[Here is a link to the deployed app on Heroku](https://construction-site-mate.herokuapp.com/)
 
-[Here is a link to the gitHub repo]()  
+[Here is a link to the gitHub repo](https://github.com/Normksb/site-mate)  
 
 ![AUR license](https://img.shields.io/static/v1?label=License&message=MIT&color=blue)
 
@@ -48,13 +48,27 @@ npm install
  
 ```
 
+In order to run the app you will need to configure the following environment variables (dotenv is included in the package dependencies for this purpose);
+
+for MYSQL
+- DB_NAME  // database name
+- DB_HOST  // network address/hostname of MYSQL server
+- DB_USER  // MYSQL username
+- DB_PASS  // MYSQL password
+- SENDGRID_API_KEY // a valid API key for sendgrid email
+
+Once you have configured your environment variables you may create database seed data using the following;
+
+```bash
+npm run seeds
+ 
+```
+
 ---
 ## Usage
 
  
-[Here is a link to a walk-through video]()
-
-Run the app locally with the following command.   
+To start the express server please use the start script already found in the package.json as follows;
 
 ```bash
 npm start
@@ -71,25 +85,25 @@ This project is licensed under ![AUR license](https://img.shields.io/static/v1?l
 
 Contributing to this project is not currently available.
 
----
-## Tests
-
-Please use these commands to perform tests.
-
-```js
-
-There are no tests at present.
-
-```
 
 ---
 
 ## Technologies
 
+Front End Technologies
+- HTML
+- CSS
 - Javascript
-- Node.js
+
+Back End Technologies
+- Node JS
+- Express JS
 - MySQL
-- Inquirer
+- Sequelize
+- Bcrypt
+- Handlebars
+- Express Handlebars
+- Sendgrid for automated emailing
 
 ---
 
@@ -98,5 +112,7 @@ There are no tests at present.
 For any questions and support please contact Brett Treweek, Yuri Kitchin or Norman Bernard.  
 - Email: bretttrew@gmail.com  
 - Github: [Brett Treweek](https://github.com/brett-treweek)
-- Github: [Yuri Kitchin]()
-- Github: [Norman Bernard]()
+- Email: ykitchin@gmail.com
+- Github: [Yuri Kitchin](https://github.com/yurikitchin)
+- Email: nksb414@gmail.com
+- Github: [Norman Bernard](https://github.com/Normksb)
