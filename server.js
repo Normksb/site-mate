@@ -1,4 +1,5 @@
 const path = require('path');
+var compression = require('compression')
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
@@ -9,6 +10,8 @@ const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 
 const app = express();
+app.use(compression())
+
 const PORT = process.env.PORT || 3001;
 
 const sess = {
